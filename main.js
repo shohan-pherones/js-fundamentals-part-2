@@ -118,7 +118,7 @@ const heroMakerPro = (age, skill) =>
 
 console.log(heroMakerPro(17, true)); */
 
-// function declarations
+/* // function declarations
 const myBirthYear = 1860;
 // console.log(ageCalculator(myBirthYear));
 
@@ -188,7 +188,7 @@ function ramFreqTest(ramFreq) {
 function cpuTurbo(cpuClock) {
   return cpuClock >= 3.1 ? `1800rpm` : `1400rpm`;
 }
-
+ */
 // brick calculation
 /*
 
@@ -202,7 +202,7 @@ underground = 50000
 
 */
 
-function brickCalculation(totalFloors) {
+/* function brickCalculation(totalFloors) {
   let totalBricks;
   const undergroundBricks = 50000;
   let bricksForAllFloors = totalFloors * 10000;
@@ -219,7 +219,7 @@ function brickCalculation(totalFloors) {
   return `total bricks needed: ${totalBricks}`;
 }
 
-// console.log(brickCalculation(11));
+// console.log(brickCalculation(11)); */
 
 /*
 
@@ -228,7 +228,7 @@ index values for 1x1: (3,-3)
 
 */
 
-function hybrid(a, b, c, d, x, y) {
+/* function hybrid(a, b, c, d, x, y) {
   const max = (a + d) * (b + c);
   const min = x + y;
   const def = 2 * (max - min) * max;
@@ -246,12 +246,241 @@ function hybrid(a, b, c, d, x, y) {
 
   return result;
 }
-
-const a = 1;
+ */
+/* const a = 1;
 const b = -2;
 const c = -1;
 const d = 2;
 const x = 3;
 const y = -3;
 
-console.log(hybrid(a, b, c, d, x, y));
+console.log(hybrid(a, b, c, d, x, y)); */
+
+// arrays
+// const friend1 = "shohan";
+// const friend2 = "badhon";
+// const friend3 = "Eklas";
+// const friend4 = "nasim";
+
+const friends = ["shohan", "badhon", "eklas", "nasim"]; //literal syntax
+
+// const years = [1990, 1992, 1996, 1998, 2002];
+const years = new Array(1990, 1992, 1996, 1998, 2002); // array function
+
+console.log(friends);
+console.log(years);
+
+// finding elements in array bt index
+console.log(friends[0]);
+console.log(friends[1]);
+console.log(friends[2]);
+console.log(friends[3]);
+console.log(friends[4]);
+
+console.log(years[0]);
+console.log(years[5]);
+
+// array length
+console.log(friends.length);
+console.log(years.length);
+
+// exercise
+const ageCalc = function (birthYear) {
+  // console.log(birthYear);
+  return 2022 - birthYear;
+};
+
+const age1 = ageCalc(years[0]);
+const age2 = ageCalc(years[5]);
+// console.log(age2);
+
+// push - add element in the end
+// unshift - add element at the beginning
+// pop - remove element from the end
+// shift - remove element from the beginning
+const lastBenchers = ["shohan", "shuvo", "abdullah", "fahim", "nasim"];
+
+lastBenchers.push("abir");
+lastBenchers.push("sajib", "badhon");
+lastBenchers.unshift("noman");
+lastBenchers.unshift("hridoy");
+lastBenchers.pop();
+lastBenchers.pop();
+lastBenchers.shift();
+lastBenchers.shift();
+
+console.log(lastBenchers);
+console.log(lastBenchers.length);
+console.log(lastBenchers[1]);
+
+// finding index by element name
+console.log(lastBenchers.indexOf("shuvo"));
+console.log(lastBenchers.indexOf("fahim"));
+console.log(lastBenchers.indexOf("pinky"));
+console.log(lastBenchers.indexOf("puzon"));
+console.log(lastBenchers.includes("fahim"));
+console.log(lastBenchers.includes("abdullah"));
+console.log(lastBenchers.includes("pinky"));
+
+if (lastBenchers.includes("pinky")) {
+  console.log("He is our captain.");
+} else {
+  console.log("Unknown");
+}
+
+if (lastBenchers.indexOf("shuvo") !== -1) {
+  console.log("He is our captain.");
+}
+
+// exercise
+/*
+2 teams: lionsClub, dragonClub
+team members: 5  per team
+lionsClub (14, 12, 17, 9, 11)
+dragonClub (18, 13, 10, 8, 12)
+
+conditions:
+winner: average jump distance >= 15
+draw: lions === dragon, both teams has >= 15 
+*/
+
+const scoreLions = (14 + 13 + 17 + 18 + 16) / 5;
+console.log(scoreLions);
+const scoreDragons = (14 + 13 + 17 + 16 + 15) / 5;
+console.log(scoreDragons);
+
+// if (scoreLions === scoreDragons && scoreLions >= 15 && scoreDragons >= 15) {
+//   console.log("Draw!");
+// } else if (
+//   scoreLions > scoreDragons &&
+//   scoreLions >= 15 &&
+//   scoreDragons >= 15
+// ) {
+//   console.log("Winner is lions!");
+// } else if (
+//   scoreDragons > scoreLions &&
+//   scoreDragons >= 15 &&
+//   scoreLions >= 15
+// ) {
+//   console.log("Winner is dragons!");
+// } else {
+//   console.log("Nothing happens!");
+// }
+
+if (scoreLions >= 15 && scoreDragons >= 15) {
+  if (scoreLions === scoreDragons) {
+    console.log("draw");
+  } else if (scoreLions > scoreDragons) {
+    console.log("lions");
+  } else {
+    console.log("dragons");
+  }
+} else {
+  console.log("Math dismiss!");
+}
+
+// functions
+// function declarations
+function add(a, b) {
+  return a + b;
+}
+
+console.log(add(5, 10));
+
+// function expression
+const doMath = function (a, b) {
+  return a - b;
+};
+
+console.log(doMath(10, 20));
+
+// arrow functions
+const mathArrow = (a, b) => a + b;
+console.log(mathArrow(10, 20));
+
+const mathArrow2 = (a, b) => {
+  return a + b;
+};
+
+console.log(mathArrow2(20, 30));
+
+// function calling function (callback)
+const fruitCutter = (fruits) => fruits * 4;
+
+const juiceMaker = (apples, bananas, oranges) => {
+  const applePieces = fruitCutter(apples);
+  const bananaPieces = fruitCutter(bananas);
+  const orangePieces = fruitCutter(oranges);
+
+  const juice = (applePieces + bananaPieces + orangePieces) / 3;
+  return `${juice} ltr. juices`;
+};
+
+console.log(juiceMaker(10, 20, 30));
+
+// currying functions
+function multi(a) {
+  return function (b) {
+    return function (c) {
+      return function (x) {
+        return function (y) {
+          return a * b * c * x * y;
+        };
+      };
+    };
+  };
+}
+
+// lambda calculus or lambda function declarations
+const multiPro = (a) => (b) => (c) => (x) => (y) => a * b * c * x * y;
+
+const eq1 = multiPro(10);
+console.log(eq1);
+
+console.log(multiPro(10)(5)(3)(2)(5));
+
+const multiUltra = (a, b, c, x, y) => a * b * c * x * y;
+console.log(multiUltra(10, 5, 11, 2, 5));
+
+// objects
+const student = {
+  firstName: "Arafat",
+  lastName: "Rahman",
+  age: 2022 - 1996,
+  job: "Programmer",
+  friends: ["Rahim", "Karim", "Suraiya", "Nishi"],
+  isGoodAtGames: true,
+}; //object literal syntax
+
+// Arafat is a programmer, and he has 4 friends. Karim is his best friend.
+
+console.log(
+  `${student.firstName} is a ${student.job}, and he has ${student.friends.length} friends. ${student.friends[1]} is his best friend.`
+);
+
+console.log(student);
+// finding properties using two methods (dot method, bracket notation)
+console.log(student.friends[3]);
+console.log(student.job);
+
+const nameKey = "Name";
+
+console.log(student["first" + nameKey]);
+console.log(student["last" + nameKey]);
+console.log(student["isGoodAt" + "Games"]);
+
+// exercise
+// const interestIn = prompt("What do you want to know about this student?");
+
+// if (student[interestIn]) {
+//   console.log(student[interestIn]);
+// } else {
+//   console.log("Invalid key!");
+// }
+
+// const whatYouKnow = prompt("What do you want to know?");
+
+// const test1 = student[whatYouKnow] ? student[whatYouKnow] : "Invalid";
+// console.log(test1);
+
+console.log(typeof null);
