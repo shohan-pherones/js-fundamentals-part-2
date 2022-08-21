@@ -256,7 +256,7 @@ const y = -3;
 
 console.log(hybrid(a, b, c, d, x, y)); */
 
-// arrays
+/* // arrays
 // const friend1 = "shohan";
 // const friend2 = "badhon";
 // const friend3 = "Eklas";
@@ -330,7 +330,7 @@ if (lastBenchers.includes("pinky")) {
 
 if (lastBenchers.indexOf("shuvo") !== -1) {
   console.log("He is our captain.");
-}
+} */
 
 // exercise
 /*
@@ -344,7 +344,7 @@ winner: average jump distance >= 15
 draw: lions === dragon, both teams has >= 15 
 */
 
-const scoreLions = (14 + 13 + 17 + 18 + 16) / 5;
+/* const scoreLions = (14 + 13 + 17 + 18 + 16) / 5;
 console.log(scoreLions);
 const scoreDragons = (14 + 13 + 17 + 16 + 15) / 5;
 console.log(scoreDragons);
@@ -483,4 +483,4 @@ console.log(student["isGoodAt" + "Games"]);
 // const test1 = student[whatYouKnow] ? student[whatYouKnow] : "Invalid";
 // console.log(test1);
 
-console.log(typeof null);
+console.log(typeof null); */
