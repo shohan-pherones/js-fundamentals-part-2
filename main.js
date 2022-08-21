@@ -484,3 +484,210 @@ console.log(student["isGoodAt" + "Games"]);
 // console.log(test1);
 
 console.log(typeof null); */
+
+// arrays
+const odd = [1, 3, 5, 7, 9, 11, 13, 15];
+console.log(odd);
+
+// const even = [2, 4, 6, 8, 10];
+const even = new Array(2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24);
+console.log(even);
+
+console.log(odd[0]);
+console.log(odd[7]);
+console.log(odd[8]);
+
+console.log(even[5]);
+console.log(even.length);
+console.log(even[even.length - 2]);
+const lastElement = even.length - 1;
+console.log(even[lastElement]);
+
+odd[2] = 55;
+odd[odd.length - 1] = 515;
+odd.push(75);
+odd.push(275);
+odd.unshift(57);
+odd.unshift(35);
+odd.pop();
+odd.pop();
+odd.shift();
+odd.shift();
+console.log(odd);
+
+console.log(even.indexOf(32));
+console.log(even.includes(45));
+console.log(even.includes(20));
+console.log(typeof even);
+
+// objects
+const computer = {
+  processor: "intel core i9",
+  clockSpeed: "4.2 GHz",
+  ram: "16gb",
+  gpuMemory: "8gb",
+  mainFanSpeedInRPM: 1800,
+  hasSSD: true,
+  HDDCount: 2,
+  price: 85000,
+};
+
+console.log(computer);
+
+console.log(computer.clockSpeed);
+console.log(computer.gpuMemory);
+console.log(computer["mainFanSpeedIn" + "RPM"]);
+
+const student = {
+  firstName: "Sara",
+  lastName: "Islam",
+  birthYear: 1996,
+
+  calcAge: function () {
+    return 2022 - this.birthYear;
+  },
+
+  greetings: function () {
+    return `Hello, ${this.firstName}`;
+  },
+};
+
+console.log(student.calcAge());
+console.log(student.greetings());
+
+const student2 = student;
+
+student2.firstName = "Tumpa";
+console.log(student);
+console.log(student2);
+
+// console.log(student2.greetings());
+
+// for loop
+// console.log("Step 1");
+// console.log("Step 2");
+// console.log("Step 3");
+// console.log("Step 4");
+// console.log("Step 5");
+// console.log("Step 6");
+
+for (let i = 1; i <= 20; i++) {
+  // console.log(i);
+}
+
+for (let i = 0; i <= 100000; i += 200) {
+  // console.log(i);
+}
+
+for (let i = 10; i <= 1000; i += 10) {
+  // console.log(i);
+}
+
+for (let i = 100; i >= 0; i--) {
+  // console.log(i);
+}
+
+const sabrinaArray = [
+  "Sabrina",
+  "Ratul",
+  "iMac",
+  "MacOS",
+  "iPhone 16",
+  "Programmer",
+  2022 - 1996,
+  ["Trina", "Mina", "Rina", "Parina"],
+  true,
+  "Dancer",
+];
+
+console.log(sabrinaArray.length);
+
+for (let i = 0; i < sabrinaArray.length; i++) {
+  console.log(sabrinaArray[i]);
+}
+
+const numbers = [10, 21, 45, 78, 50, 65];
+
+let sum = 0;
+
+for (let i = 0; i < numbers.length; i++) {
+  sum = sum + numbers[i];
+}
+console.log(sum);
+
+const arr = [10, true, 21, "a", "b", false, 55, true, "x"];
+console.log(arr);
+
+const arr2 = [];
+
+for (let i = 0; i < arr.length; i++) {
+  arr2.push(typeof arr[i]);
+}
+
+console.log(arr2);
+
+const years = [1994, 1996, 1998, 2001, 1993, 1995];
+
+const ages = [];
+
+for (let i = 0; i < years.length; i++) {
+  ages.push(2022 - years[i]);
+}
+
+console.log(ages);
+console.log("Continue");
+
+// continue and break
+// for (let i = 0; i < arr.length; i++) {
+//   if (typeof arr[i] === "string") continue;
+//   console.log(arr[i], typeof arr[i]);
+// }
+
+for (let i = 0; i < arr.length; i++) {
+  if (arr[i] === arr[4]) break;
+  console.log(arr[i], typeof arr[i]);
+}
+
+// loop inside a loop
+for (let i = 1; i <= 10; i++) {
+  console.log(`Step ---------- ${i}`);
+  for (let j = 1; j <= i; j++) {
+    console.log(`Run --------- ${j}`);
+  }
+}
+
+// star pattern
+/*
+ *****
+ *****
+ *****
+ *****
+ *****
+ */
+
+let n = 10;
+let star = "";
+
+for (let row = 1; row <= n; row++) {
+  for (let col = 1; col <= n; col++) {
+    star += "*";
+  }
+  star += "\n";
+}
+
+console.log(star);
+
+// while loop
+const arr3 = [10, 20, 30, 40, 50];
+
+let i = 0;
+while (i < arr3.length) {
+  console.log(arr3[i]);
+  i++;
+}
+
+let x = 1;
+while (x <= 100) {
+  console.log(x);
+  x++;
+}
